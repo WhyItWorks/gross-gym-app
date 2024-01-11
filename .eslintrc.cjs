@@ -91,6 +91,7 @@ module.exports = {
       }
     ],
     // No permitir el uso de punto y coma al terminar una linea
-    semi: 'off'
+    semi: 'off',
+    'n/no-missing-import': 'off'
   }
 }

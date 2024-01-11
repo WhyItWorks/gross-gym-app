@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 import { LoginOrganism } from '../../organisms/login'
 import { IFormField } from 'src/interfaces'
 
-export const Login: React.FC = () => {
+export const AccessControl: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const onAccessRegister = (formValues: {
     [value: string]: string | number
@@ -11,6 +12,9 @@ export const Login: React.FC = () => {
     console.log(formValues)
     setTimeout(() => {
       setLoading(false)
+      toast.success('Asistencia registrada', { theme: 'colored', progress: 0 })
+      toast.error('Usuario no registrado', { theme: 'colored', progress: 0 })
+      toast.warning('Fuera de horario', { theme: 'colored', progress: 0 })
     }, 1000)
   }
   const inputs: IFormField[] = [
@@ -18,11 +22,6 @@ export const Login: React.FC = () => {
       rules: [{ required: true, message: 'Ingresa tu rut' }],
       name: 'rut',
       placeholder: 'Rut'
-    },
-    {
-      rules: [{ required: true, message: 'Ingresa tu contraseña' }],
-      name: 'password',
-      placeholder: 'Contraseña'
     }
   ]
   return (
@@ -30,8 +29,8 @@ export const Login: React.FC = () => {
       formName={'accessControlForm'}
       inputs={inputs}
       loading={loading}
-      submitButtonName='Entrar'
-      title={'Iniciar sesión'}
+      submitButtonName='Registrar asistencia'
+      title={'Control de acceso'}
       onSubmit={onAccessRegister}
     />
   )

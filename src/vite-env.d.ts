@@ -19,6 +19,11 @@ declare module '*.gif' {
   export default image
 }
 
+declare module '*.png' {
+  const image: string
+  export default image
+}
+
 declare module '*.scss' {
   const styles: { [className: string]: string }
   export default styles

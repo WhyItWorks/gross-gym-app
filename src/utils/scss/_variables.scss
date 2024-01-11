@@ -1,0 +1,149 @@
+// Static colors
+$color-white: #ffffff;
+$color-white-blue: #eaeff7;
+$color-blue: #2684ff;
+$color-blue-lighten: #9ecffa;
+$color-blue-darken: #213f68;
+$color-blue-lighten-250: rgba($color-blue-lighten, 0.25);
+$color-cyan-blue-light: #e7f3fe;
+$color-red: #ec5b56;
+$color-red-white: #fdf0ef;
+$color-red-lighten: #f58383;
+$color-red-darken: #e50f0f;
+$color-red-danger: #ff4d4f;
+$color-pink-red: #ff3e43;
+$color-green: #36b37e;
+$color-green-lighten: #60d9a6;
+$color-green-white: #effbf6;
+$color-green-darken: #0c9159;
+$color-green-success: #52c41a;
+$color-yellow: #ffc400;
+$color-yellow-lighten: #ffc887;
+$color-yellow-lighten-250: rgba($color-yellow-lighten, 0.25);
+$color-yellow-darken: #fea92c;
+$color-yellow-warning: #faad14;
+$color-grey: #aaa9a9;
+$color-grey-lighten: #dcdcdc;
+$color-grey-darken: #808080;
+$color-grey-shadow-dark: #4a4a4a;
+$color-grey-soft: #d8d8d8;
+$color-grey-500: rgba($color-grey-soft, 0.5);
+$color-grey-lighten-500: rgba($color-grey-lighten, 0.5);
+$color-grey-title: #000000d9;
+$color-grey-secondary-title: #00000073;
+$color-grey-tag: #f6f6f6;
+$color-background: #f4f5f7;
+$color-black: #000000;
+
+$primary-colors: (
+  'Red': $color-red,
+  'Blue': $color-blue,
+  'Green': $color-green,
+  'Yellow': $color-yellow,
+  'Grey': $color-grey
+);
+$lighten-colors: (
+  'Red': $color-red-lighten,
+  'Blue': $color-blue-lighten,
+  'Green': $color-green-lighten,
+  'Yellow': $color-yellow-lighten,
+  'Grey': $color-grey-lighten
+);
+$darken-colors: (
+  'Red': $color-red-darken,
+  'Blue': $color-blue-darken,
+  'Green': $color-green-darken,
+  'Yellow': $color-yellow-darken,
+  'Grey': $color-grey-darken
+);
+
+$colors: map-merge($primary-colors, map-merge($lighten-colors, $darken-colors));
+
+$opacities: (
+  'Opacity25': 0.25,
+  'Opacity50': 0.5,
+  'Opacity75': 0.75,
+  '': 1
+);
+
+// Theme colors
+$primary: $color-blue !default;
+$secondary: $color-grey-500 !default;
+$success: $color-green !default;
+$info: $color-blue !default;
+$warning: $color-yellow !default;
+$danger: $color-red !default;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    'Primary': $primary,
+    'Secondary': $secondary,
+    'Success': $success,
+    'Info': $info,
+    'Warning': $warning,
+    'Danger': $danger
+  ),
+  $theme-colors
+);
+
+$color-primary: #ffffff;
+$color-default: #202020;
+
+// Texs colors
+$text-white: $color-primary !default;
+$text-default: $color-default !default;
+$text-label: rgba($color-default, 0.75) !default;
+$text-secondary: $color-grey-lighten !default;
+$text-highlight: $color-blue !default;
+$text-decoration: $color-blue-lighten !default;
+
+// Fonts
+$font-ptsans: 'PT Sans', sans-serif;
+$font-arial: Arial;
+$font-size-base: 1rem !default; // 16px
+
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-heavy-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+
+$h1-font-size: $font-size-base * 2.25 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base * 1.13 !default;
+
+// Spacing
+$spacing-0: 0 !default;
+$spacing-xs: 0.3125rem; // 5px
+$spacing-sm: 0.625rem; // 10px
+$spacing-md: 1.25rem; // 20px
+$spacing-lg: 3.125rem; // 50px
+
+// Borders
+$border: 21px;
+$border-button: 4px;
+
+// Code
+$code-font-size: 87.5% !default;
+$code-color: $primary !default;
+
+$kbd-padding-y: 0.3rem !default;
+$kbd-padding-x: 0.35rem !default;
+$kbd-font-size: $code-font-size !default;
+$kbd-color: $color-primary !default;
+$kbd-bg: $color-grey !default;
+
+$pre-scrollable-max-height: 450px !default;
+
+// Transitions
+$transition-all-ease: all 0.4s ease 0s;
+
+// Shadow
+$card-shadow: 0px 0px 10px rgba(128, 128, 128, 0.1);
+
+// Media Queries
+$mobile-screen: 560px;
+$desktop-screen: 1024px;
